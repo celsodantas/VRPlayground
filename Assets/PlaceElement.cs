@@ -3,47 +3,68 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
-public class PlaceElement : MonoBehaviour {
-
+public class PlaceElement : MonoBehaviour
+{
 
     public VRTK_ControllerEvents controller;
     public VRTK_ControllerEvents.ButtonAlias activationButton = VRTK_ControllerEvents.ButtonAlias.TriggerPress;
     public VRTK_CustomRaycast customRaycast;
 
-    // Use this for initialization
-    void Start () {
+    bool isGrabbingElement = false;
+    GameObject grabbedObject = null;
+    float maximumPlacementLength = 500f;
+    float objectRotation = 0f;
+
+    void Start()
+    {
         if (controller == null)
         {
             controller = GetComponentInParent<VRTK_ControllerEvents>();
         }
 
         controller.SubscribeToButtonAliasEvent(activationButton, true, DoActivationButtonPressed);
+        controller.SubscribeToButtonAliasEvent(activationButton, false, DoActivationButtonReleased);
     }
 
     protected virtual void DoActivationButtonPressed(object sender, ControllerInteractionEventArgs e)
     {
-        Ray rayCast = new Ray(transform.position, transform.forward);
-        
-        LayerMask layersToIgnore = Physics.IgnoreRaycastLayer;
-        float maximumLength = 500f;
+        isGrabbingElement = true;
+        grabbedObject = InstantiateAndReturnObject();
+    }
 
-        RaycastHit pointerCollidedWith;
-        bool rayHit = VRTK_CustomRaycast.Raycast(customRaycast, rayCast, out pointerCollidedWith, layersToIgnore, maximumLength);
-     
-        if (rayHit)
+    protected virtual void DoActivationButtonReleased(object sender, ControllerInteractionEventArgs e)
+    {
+        isGrabbingElement = false;
+        grabbedObject = null;
+    }
+
+    private GameObject InstantiateAndReturnObject()
+    {
+        Object[] objects = Resources.LoadAll("Models/Furniture/", typeof(GameObject));
+        return GameObject.Instantiate((GameObject)objects[0]);
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (isGrabbingElement)
         {
-            Object[] objects = Resources.LoadAll("Models/Furniture/", typeof(GameObject));
-            print(objects);
+            // positioning
+            Ray rayCast = new Ray(transform.position, transform.forward);
 
-            foreach (var x in objects)
-                print(x.name);
+            LayerMask layersToIgnore = Physics.IgnoreRaycastLayer;
 
-            GameObject newObject = GameObject.Instantiate( (GameObject) objects[0]);
-            newObject.transform.position = pointerCollidedWith.point;
+            RaycastHit pointerCollidedWith;
+            bool rayHit = VRTK_CustomRaycast.Raycast(customRaycast, rayCast, out pointerCollidedWith, layersToIgnore, maximumPlacementLength);
+
+            if (rayHit)
+            {
+                grabbedObject.transform.position = pointerCollidedWith.point;
+
+                // rotating
+                objectRotation += controller.GetTouchpadAxis().x;
+                grabbedObject.transform.rotation = Quaternion.Euler(new Vector3(0, objectRotation, 0));
+            }
         }
     }
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }
