@@ -7,10 +7,12 @@ public class AttachObject : MonoBehaviour {
     public GameObject attach;
     public Vector3 rotationAdjustment;
 
-    private GameObject objectWrapper = new GameObject();
+	private GameObject objectWrapper;
 
 	// Use this for initialization
 	void Start () {
+		objectWrapper = new GameObject();
+
         attach.transform.SetParent(transform);
         attach.transform.position = new Vector3();
         attach.transform.rotation = Quaternion.Euler(rotationAdjustment);
