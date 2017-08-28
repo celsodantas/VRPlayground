@@ -20,24 +20,24 @@ public class PlaceElement : MonoBehaviour
             controller = GetComponentInParent<VRTK_ControllerEvents>();
         }
 
-        controller.SubscribeToButtonAliasEvent(activationButton, true, DoActivationButtonPressed);
-        controller.SubscribeToButtonAliasEvent(activationButton, false, DoActivationButtonReleased);
+        // object set is happening on MenuManager
+        //controller.SubscribeToButtonAliasEvent(activationButton, true, DoActivationButtonPressed);
+        //controller.SubscribeToButtonAliasEvent(activationButton, false, DoActivationButtonReleased);
     }
 
-    protected virtual void DoActivationButtonPressed(object sender, ControllerInteractionEventArgs e)
-    {
-        grabbedObject = GetSelectedObject();
-    }
+    //protected virtual void DoActivationButtonPressed(object sender, ControllerInteractionEventArgs e)
+    //{
+    //    grabbedObject = GetSelectedObject();
+    //}
 
-    protected virtual void DoActivationButtonReleased(object sender, ControllerInteractionEventArgs e)
+    //protected virtual void DoActivationButtonReleased(object sender, ControllerInteractionEventArgs e)
+    //{
+    //    grabbedObject = null;
+    //}
+    
+    public void SetElementToBePlaced(GameObject gameObject)
     {
-        grabbedObject = null;
-    }
-
-    private GameObject GetSelectedObject()
-    {
-        Object[] objects = Resources.LoadAll("Models/Furniture/", typeof(GameObject));
-        return GameObject.Instantiate((GameObject)objects[0]);
+        grabbedObject = GameObject.Instantiate(gameObject);
     }
 
     void FixedUpdate()

@@ -13,9 +13,12 @@ public class AttachObject : MonoBehaviour {
 	void Start () {
 		objectWrapper = new GameObject();
 
-        attach.transform.SetParent(transform);
-        attach.transform.position = new Vector3();
-        attach.transform.rotation = Quaternion.Euler(rotationAdjustment);
+        if (attach != null)
+        {
+          attach.transform.SetParent(transform);
+          attach.transform.position = new Vector3();
+          attach.transform.rotation = Quaternion.Euler(rotationAdjustment);
+        }
     }
 
     // Update is called once per frame
