@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 80dc552a33f111e4b90cf5fe05e02e1d
+timeCreated: 1503980171
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Black Metal
+    100002: Concrete - Cast-in-Place Concrete
+    100004: Door - Exterior Cladding
+    100006: Door - Exterior Trim
+    100008: Door - Wood Frame
+    100010: Door - Wood Panel
+    100012: Fire
+    100014: Generic
+    100016: Glass
+    100018: Glazing - Exterior
+    100020: //RootNode
+    100022: MainFloor-Ceiling
+    100024: Object
+    100026: Walls
+    400000: Black Metal
+    400002: Concrete - Cast-in-Place Concrete
+    400004: Door - Exterior Cladding
+    400006: Door - Exterior Trim
+    400008: Door - Wood Frame
+    400010: Door - Wood Panel
+    400012: Fire
+    400014: Generic
+    400016: Glass
+    400018: Glazing - Exterior
+    400020: //RootNode
+    400022: MainFloor-Ceiling
+    400024: Object
+    400026: Walls
+    2300000: Black Metal
+    2300002: Concrete - Cast-in-Place Concrete
+    2300004: Door - Exterior Cladding
+    2300006: Door - Exterior Trim
+    2300008: Door - Wood Frame
+    2300010: Door - Wood Panel
+    2300012: Fire
+    2300014: Generic
+    2300016: Glass
+    2300018: Glazing - Exterior
+    2300020: MainFloor-Ceiling
+    2300022: Object
+    2300024: Walls
+    3300000: Black Metal
+    3300002: Concrete - Cast-in-Place Concrete
+    3300004: Door - Exterior Cladding
+    3300006: Door - Exterior Trim
+    3300008: Door - Wood Frame
+    3300010: Door - Wood Panel
+    3300012: Fire
+    3300014: Generic
+    3300016: Glass
+    3300018: Glazing - Exterior
+    3300020: MainFloor-Ceiling
+    3300022: Object
+    3300024: Walls
+    4300000: Walls
+    4300002: Object
+    4300004: Fire
+    4300006: Black Metal
+    4300008: Glass
+    4300010: Concrete - Cast-in-Place Concrete
+    4300012: Glazing - Exterior
+    4300014: Door - Exterior Trim
+    4300016: Door - Wood Frame
+    4300018: Door - Wood Panel
+    4300020: Door - Exterior Cladding
+    4300022: Generic
+    4300024: MainFloor-Ceiling
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
