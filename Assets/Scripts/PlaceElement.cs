@@ -33,6 +33,7 @@ public class PlaceElement : MonoBehaviour
 
     protected virtual void DoActivationButtonPressed(object sender, ControllerInteractionEventArgs e)
     {
+        Debug.Log("Trigger pressed");
         grabbedObject = null;
     }
 
