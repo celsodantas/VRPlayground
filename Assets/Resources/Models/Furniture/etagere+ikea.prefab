@@ -38,7 +38,8 @@ GameObject:
   - component: {fileID: 4618677988828262}
   - component: {fileID: 33765129146642546}
   - component: {fileID: 23081805330387734}
-  - component: {fileID: 65382269623098634}
+  - component: {fileID: 136784495352803656}
+  - component: {fileID: 114363779119024936}
   m_Layer: 0
   m_Name: "Biblioth\xE8que EXPEDIT"
   m_TagString: Untagged
@@ -226,7 +227,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1472120405386442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.969046, y: 4.352119e-17, z: -1.9600202}
+  m_LocalPosition: {x: 2.0895588, y: 2.8063135e-17, z: -1.2638512}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4618677988828262}
@@ -682,8 +683,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658331625518618}
   m_Mesh: {fileID: 4300000, guid: cf85e21f89d7a4b44b0f0ac049ae39b1, type: 3}
---- !u!65 &65382269623098634
-BoxCollider:
+--- !u!114 &114363779119024936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201868223749792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1731d642c0b250b48bb8cdfb153d9792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 0}
+--- !u!136 &136784495352803656
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -691,6 +704,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.49, y: 1.495, z: 0.39000002}
+  m_Radius: 0.745
+  m_Height: 1.495
+  m_Direction: 1
   m_Center: {x: 0.745, y: 0.7475, z: 0.19500001}
