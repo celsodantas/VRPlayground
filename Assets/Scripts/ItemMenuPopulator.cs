@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class ItemMenuPopulator : MonoBehaviour
 {
     public GameObject buttonReference;
-    public MenuManager menuManager;
+    public MenuManager menuManager; // change this to a delegator interface
 
     private GameObject[] items;
     private GameObject[] buttons;

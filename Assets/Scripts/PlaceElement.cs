@@ -14,8 +14,6 @@ public class PlaceElement : MonoBehaviour
     private float objectRotation = 0f;
     private VRTK_Pointer pointer;
 
-    GameObject sample = null;
-
     void Start()
     {
         if (controllerEvents == null)
@@ -32,23 +30,26 @@ public class PlaceElement : MonoBehaviour
 
     protected virtual void DoActivationButtonPressed(object sender, ControllerInteractionEventArgs e)
     {
-        Debug.Log("Trigger pressed");
+        if (grabbedObject != null)
+        {
+            EnableCollisions(grabbedObject, true);
+        }
+
         grabbedObject = null;
     }
 
     public void SetElementToBePlaced(GameObject gameObject)
     {
         grabbedObject = GameObject.Instantiate(gameObject);
-
-        DisableCollisions(grabbedObject);
+        EnableCollisions(grabbedObject, false);
     }
 
-    private void DisableCollisions(GameObject obj)
+    private void EnableCollisions(GameObject obj, bool enabled)
     {
         // Disabling collider so the object does keep zooming on the wand
         foreach (Collider col in obj.GetComponentsInChildren<Collider>())
         {
-            col.enabled = false;
+            col.enabled = enabled;
         }
     }
 
@@ -65,11 +66,13 @@ public class PlaceElement : MonoBehaviour
 
             if (rayHit)
             {
+                // Hit UI
                 if (pointerCollidedWith.transform.gameObject.layer == LayerMask.NameToLayer("UI"))
                 {
-                    grabbedObject.transform.position = pointer.customOrigin.position + (pointer.customOrigin.forward.normalized/3);
+                    grabbedObject.transform.position = pointer.customOrigin.position + (pointer.customOrigin.forward.normalized / 3);
                     grabbedObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 }
+                // Hit placeable location
                 else
                 {
                     grabbedObject.transform.position = pointerCollidedWith.point;
@@ -79,7 +82,7 @@ public class PlaceElement : MonoBehaviour
             else
             {
                 grabbedObject.transform.position = pointer.customOrigin.position + (pointer.customOrigin.forward.normalized / 3);
-                grabbedObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); 
+                grabbedObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             }
 
             // rotating
