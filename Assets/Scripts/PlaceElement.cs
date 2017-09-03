@@ -39,6 +39,17 @@ public class PlaceElement : MonoBehaviour
     public void SetElementToBePlaced(GameObject gameObject)
     {
         grabbedObject = GameObject.Instantiate(gameObject);
+
+        DisableCollisions(grabbedObject);
+    }
+
+    private void DisableCollisions(GameObject obj)
+    {
+        // Disabling collider so the object does keep zooming on the wand
+        foreach (Collider col in obj.GetComponentsInChildren<Collider>())
+        {
+            col.enabled = false;
+        }
     }
 
     void FixedUpdate()
