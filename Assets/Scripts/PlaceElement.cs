@@ -25,7 +25,6 @@ public class PlaceElement : MonoBehaviour
 
         // object set is happening on MenuManager
         controllerEvents.SubscribeToButtonAliasEvent(activationButton, true, DoActivationButtonPressed);
-        //controller.SubscribeToButtonAliasEvent(activationButton, false, DoActivationButtonReleased);
 
         // getting pointer as we need it to use for reference for the raycast (to know where it's forward on the controller)
         pointer = GetComponent<VRTK_Pointer>();
@@ -36,11 +35,6 @@ public class PlaceElement : MonoBehaviour
         Debug.Log("Trigger pressed");
         grabbedObject = null;
     }
-
-    //protected virtual void DoActivationButtonReleased(object sender, ControllerInteractionEventArgs e)
-    //{
-    //    grabbedObject = null;
-    //}
 
     public void SetElementToBePlaced(GameObject gameObject)
     {
