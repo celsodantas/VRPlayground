@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4974761556135992}
   - component: {fileID: 136136675861417678}
-  - component: {fileID: 114513345031934900}
+  - component: {fileID: 65640919327020400}
   m_Layer: 0
   m_Name: Natuzzi-erasmo-2716
   m_TagString: Untagged
@@ -455,7 +455,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403647598107790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4296553, y: 4.7636177e-17, z: -2.1453426}
+  m_LocalPosition: {x: 2.331596, y: -2.7770124e-17, z: 1.2506552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4422748095636104}
@@ -1021,18 +1021,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721509875280300}
   m_Mesh: {fileID: 4300012, guid: 787a7f74200678b4ab751e26f8787857, type: 3}
---- !u!114 &114513345031934900
-MonoBehaviour:
+--- !u!65 &65640919327020400
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403647598107790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1731d642c0b250b48bb8cdfb153d9792, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.6391742, y: 0.5255141, z: 1.0855428}
+  m_Center: {x: 0.2557422, y: 0.26803064, z: 0.50855535}
 --- !u!136 &136136675861417678
 CapsuleCollider:
   m_ObjectHideFlags: 1
