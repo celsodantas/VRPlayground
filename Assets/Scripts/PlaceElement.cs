@@ -5,7 +5,6 @@ using VRTK;
 
 public class PlaceElement : MonoBehaviour
 {
-    public VRTK_ControllerEvents controllerEvents;
     public VRTK_ControllerEvents.ButtonAlias activationButton = VRTK_ControllerEvents.ButtonAlias.TriggerPress;
     public VRTK_CustomRaycast customRaycast;
 
@@ -13,19 +12,16 @@ public class PlaceElement : MonoBehaviour
     private float maximumPlacementLength = 500f;
     private float objectRotation = 0f;
     private VRTK_Pointer pointer;
+    private VRTK_ControllerEvents controllerEvents;
 
     void Start()
     {
-        if (controllerEvents == null)
-        {
-            controllerEvents = GetComponentInParent<VRTK_ControllerEvents>();
-        }
+        // getting pointer as we need it to use for reference for the raycast (to know where it's forward on the controller)
+        pointer = GetComponent<VRTK_Pointer>();
+        controllerEvents = GetComponentInParent<VRTK_ControllerEvents>();
 
         // object set is happening on MenuManager
         controllerEvents.SubscribeToButtonAliasEvent(activationButton, true, DoActivationButtonPressed);
-
-        // getting pointer as we need it to use for reference for the raycast (to know where it's forward on the controller)
-        pointer = GetComponent<VRTK_Pointer>();
     }
 
     protected virtual void DoActivationButtonPressed(object sender, ControllerInteractionEventArgs e)
