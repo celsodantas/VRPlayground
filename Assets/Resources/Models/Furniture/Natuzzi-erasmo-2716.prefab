@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4091489205208372}
   - component: {fileID: 33519781695867138}
   - component: {fileID: 23419490026132474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4680010010218562}
   - component: {fileID: 33870392265660700}
   - component: {fileID: 23151763564465488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4884959104172212}
   - component: {fileID: 33588768926753136}
   - component: {fileID: 23157053982441970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4859909183098744}
   - component: {fileID: 33267148699127598}
   - component: {fileID: 23040570962547806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4651673648876794}
   - component: {fileID: 33351999147748146}
   - component: {fileID: 23326892387640110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 136136675861417678}
   - component: {fileID: 65640919327020400}
   - component: {fileID: 114887460587874640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Natuzzi-erasmo-2716
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4445487723812862}
   - component: {fileID: 33564549564345276}
   - component: {fileID: 23569318850476186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4877078657909216}
   - component: {fileID: 33613729209547316}
   - component: {fileID: 23533594095108066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 4826526235652376}
   - component: {fileID: 33189839478879860}
   - component: {fileID: 23716998215250562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 4422748095636104}
   - component: {fileID: 33642442488132242}
   - component: {fileID: 23490422606003346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 4420973045499262}
   - component: {fileID: 33942282516494026}
   - component: {fileID: 23607506078306642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 4138562717508932}
   - component: {fileID: 33010317510082598}
   - component: {fileID: 23165377413566130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 4251883358558532}
   - component: {fileID: 33580153844494700}
   - component: {fileID: 23232380485031176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 4293335298397124}
   - component: {fileID: 33744886316096646}
   - component: {fileID: 23385649011338542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 4108847703144260}
   - component: {fileID: 33645801934971194}
   - component: {fileID: 23491582792143418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Group 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403647598107790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7214991, y: -2.2248071e-17, z: 1.0019641}
+  m_LocalPosition: {x: 1.922, y: -3.2583385e-17, z: 0.685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4422748095636104}
