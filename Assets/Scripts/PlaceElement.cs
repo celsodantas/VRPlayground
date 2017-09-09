@@ -22,6 +22,7 @@ public class PlaceElement : MonoBehaviour
 
         // object set is happening on MenuManager
         controllerEvents.SubscribeToButtonAliasEvent(activationButton, true, DoActivationButtonPressed);
+        EventManager.StartListening(EventManager.Event.INTERACTABLE_MENU_GRAB_PRESSED, GrabElementEvent);
     }
 
     protected virtual void DoActivationButtonPressed(object sender, ControllerInteractionEventArgs e)
@@ -32,6 +33,12 @@ public class PlaceElement : MonoBehaviour
         }
 
         grabbedObject = null;
+    }
+
+    protected void GrabElementEvent(object sender)
+    {
+        var element = ((IGrabElementEvent)sender).GetElement();
+        SetElementToBePlaced(element);
     }
 
     public void SetElementToBePlaced(GameObject gameObject)

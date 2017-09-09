@@ -16,7 +16,7 @@ public class ControllerEventBroadcast : MonoBehaviour {
 
     protected virtual void DoActivationButtonPressed(object sender, ControllerInteractionEventArgs e)
     {
-        EventManager.TriggerEvent("controller.trigger_press");
+        // TODO send event
     }
 
     // Update is called once per frame

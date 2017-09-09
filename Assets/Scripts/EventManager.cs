@@ -5,8 +5,17 @@ using System.Collections.Generic;
 
 public class EventManager : MonoBehaviour
 {
+    [System.Serializable]
+    public class VRHomeEvent : UnityEvent<object>
+    {
+    }
 
-    private Dictionary<string, UnityEvent> eventDictionary;
+    public enum Event
+    {
+        INTERACTABLE_MENU_GRAB_PRESSED = 1
+    }
+
+    private Dictionary<Event, VRHomeEvent> eventDictionary;
 
     private static EventManager eventManager;
 
@@ -36,41 +45,42 @@ public class EventManager : MonoBehaviour
     {
         if (eventDictionary == null)
         {
-            eventDictionary = new Dictionary<string, UnityEvent>();
+            eventDictionary = new Dictionary<Event, VRHomeEvent>();
         }
     }
 
-    public static void StartListening(string eventName, UnityAction listener)
+    public static void StartListening(Event eventID, UnityAction<object> listener)
     {
-        UnityEvent thisEvent = null;
-        if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        VRHomeEvent thisEvent = null;
+        if (instance.eventDictionary.TryGetValue(eventID, out thisEvent))
         {
             thisEvent.AddListener(listener);
         }
         else
         {
-            thisEvent = new UnityEvent();
+            thisEvent = new VRHomeEvent();
             thisEvent.AddListener(listener);
-            instance.eventDictionary.Add(eventName, thisEvent);
+            instance.eventDictionary.Add(eventID, thisEvent);
         }
     }
 
-    public static void StopListening(string eventName, UnityAction listener)
+    public static void StopListening(Event eventID, UnityAction<object> listener)
     {
         if (eventManager == null) return;
-        UnityEvent thisEvent = null;
-        if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        VRHomeEvent thisEvent = null;
+        if (instance.eventDictionary.TryGetValue(eventID, out thisEvent))
         {
             thisEvent.RemoveListener(listener);
         }
     }
 
-    public static void TriggerEvent(string eventName)
+    public static void TriggerEvent(Event eventID, object sender)
     {
-        UnityEvent thisEvent = null;
-        if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        VRHomeEvent thisEvent = null;
+
+        if (instance.eventDictionary.TryGetValue(eventID, out thisEvent))
         {
-            thisEvent.Invoke();
+            thisEvent.Invoke(sender);
         }
     }
 }
